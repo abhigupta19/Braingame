@@ -35,7 +35,7 @@ public class ac extends AppCompatActivity {
         r = new Random();
         int a = r.nextInt(41);
         int b = r.nextInt(41);
-        t2.setText("your score "+Integer.toString(a) + "+" + Integer.toString(b));
+        t2.setText(Integer.toString(a) + "+" + Integer.toString(b));
         inc = r.nextInt(4);
         for (int i = 0; i < 4; i++) {
             if (i == inc) {
@@ -61,7 +61,8 @@ public class ac extends AppCompatActivity {
         b1.setVisibility(View.INVISIBLE);
         c.start();
         newlist();
-        t6.setVisibility(View.INVISIBLE);
+        t6.setText("");
+
 
 
     }
@@ -111,8 +112,8 @@ public class ac extends AppCompatActivity {
             public void onFinish() {
                 t1.setText("0");
                 b1.setVisibility(View.VISIBLE);
-                t6.setText(Integer.toString(score)+"/"+Integer.toString(total));
-                
+                t6.setText("your score is"+Integer.toString(score)+"/"+Integer.toString(total));
+
 
             }
         }.start();
